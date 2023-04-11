@@ -1,9 +1,14 @@
 
 
+import { Cart } from "./components/Cart/Cart";
+import { Catalog } from "./components/Catalog/Catalog";
+
+
 export function App() {
   return (
     <>
-      <h1> Hello word!</h1>
+      <Catalog />
+      <Cart />
     </>
   )
 }
