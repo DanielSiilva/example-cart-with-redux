@@ -1,0 +1,34 @@
+{
+    "products": [
+      {
+        "id": 1,
+        "title": "Teclado gamer",
+        "price": 450.90
+      },
+      {
+        "id": 2,
+        "title": "Mouse Gamer",
+        "price": 150.90
+      },
+      {
+        "id": 3,
+        "title": "Pc Gamer",
+        "price": 15.000
+      }
+    ],
+    
+    "stock": [
+      {
+        "id": 1,
+        "quantity": 3
+      },
+      {
+        "id": 2,
+        "quantity": 0
+      },
+      {
+        "id": 3,
+        "quantity": 1
+      }
+    ]
+}
