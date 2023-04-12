@@ -5,6 +5,7 @@ import { ICartItem } from "../../store/cart/types"
 
 
 export function Cart (){
+    //useSelector: função que permie acesso ao state do reducer
     const cart = useSelector<IState, ICartItem[]>(state => state.cart.items)
    
     
