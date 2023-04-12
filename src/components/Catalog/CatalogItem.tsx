@@ -1,10 +1,23 @@
+import { useDispatch, useSelector} from "react-redux";
 import { IProduct } from "../../store/cart/types"
+import { useCallback } from "react";
+import { addProductToCartRequest } from "../../store/cart/actions";
 
 interface CatalogItemProps{
     product: IProduct
 }
 
 export function CatalogItem ({product}: CatalogItemProps){
+    //Função que vai disparar uma ação
+    const dispatch = useDispatch();
+
+    // const hasFailedStockCheck = useSelector<IState>(state =>{
+    //     return 
+    // })
+
+    const handleAddProductToCart = useCallback(()=>{
+        dispatch(addProductToCartRequest(product))
+    }, [dispatch, product])
 
 
     return (
@@ -14,7 +27,7 @@ export function CatalogItem ({product}: CatalogItemProps){
 
             <button 
                 type="button"
-                // onClick={handleAddProductToCart}
+                onClick={handleAddProductToCart}
             > 
                 Comprar
             </button>
@@ -25,4 +38,9 @@ export function CatalogItem ({product}: CatalogItemProps){
 
         </article>
     )
+}
+
+
+function dispatch(arg: any){
+    throw new Error("Function not implemented.")
 }
